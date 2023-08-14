@@ -59,7 +59,7 @@ const getWeatherDetails=(cityName,latitude,longitude)=>{
 const getCityCoordinates=()=>{
     const CityName=cityInput.value.trim();//Get user entered city name and remove extra spaces
     if(!CityName) return;//return if cityName is empty
-    const geoCoding_API_URL=`http://api.openweathermap.org/geo/1.0/direct?q=${CityName}&limit=1&appid=${API_KEY}`;
+    const geoCoding_API_URL=`https://api.openweathermap.org/geo/1.0/direct?q=${CityName}&limit=1&appid=${API_KEY}`;
     //get entered city coordinates(latitude,longitude and name) from the API resopnse
     fetch(geoCoding_API_URL)
     .then(res=>res.json())
